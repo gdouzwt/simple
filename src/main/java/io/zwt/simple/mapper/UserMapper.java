@@ -34,8 +34,32 @@ public interface UserMapper {
     /**
      * 新增用户
      *
-     * @param
+     * @param sysUser
      * @return
      */
     int insert(SysUser sysUser);
+
+    /**
+     * 新增用户 - 使用 useGenerateKeys 方式
+     *
+     * @param sysUser
+     * @return
+     */
+    int insert2(SysUser sysUser);
+
+    /**
+     * 新增用户 - 使用 selectKey 方式
+     *
+     * @param sysUser
+     * @return
+     */
+    int insert3(SysUser sysUser);
+
+    /**
+     * 根据主键更新
+     *
+     * @param sysUser
+     * @return
+     */
+    int updateById(SysUser sysUser);
 }
