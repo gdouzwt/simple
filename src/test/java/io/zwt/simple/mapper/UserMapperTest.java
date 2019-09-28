@@ -1,5 +1,6 @@
 package io.zwt.simple.mapper;
 
+import io.zwt.simple.model.SysRole;
 import io.zwt.simple.model.SysUser;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Assert;
@@ -43,6 +44,22 @@ public class UserMapperTest extends BaseMapperTest {
 
         } finally {
             // 不要忘记关闭 sqlSession
+            sqlSession.close();
+        }
+    }
+
+    @Test
+    public void testSelectRolesByUserId() {
+        SqlSession sqlSession = getSqlSession();
+        try {
+            UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+            // 调用 selectRolesByUserId 方法，查询 id = 1 的用户的角色
+            List<SysRole>  roleList =  userMapper.selectRolesByUserId(1l);
+            // 结果不为空
+            Assert.assertNotNull(roleList);
+            // 角色数量大于 0 个
+            Assert.assertTrue(roleList.size() > 0);
+        } finally {
             sqlSession.close();
         }
     }
