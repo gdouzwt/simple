@@ -25,6 +25,12 @@
     </environments>
 
     <mappers>
-        <mapper resource="io/zwt/simple/mapper/CountryMapper.xml"/>
+        <package name="io.zwt.simple.mapper"/>
+<!--                <mapper resource="io/zwt/simple/mapper/CountryMapper.xml"/>-->
+<!--                <mapper resource="io/zwt/simple/mapper/UserMapper.xml"/>-->
+<!--                <mapper resource="io/zwt/simple/mapper/RoleMapper.xml"/>-->
+<!--                <mapper resource="io/zwt/simple/mapper/PrivilegeMapper.xml"/>-->
+<!--                <mapper resource="io/zwt/simple/mapper/UserRoleMapper.xml"/>-->
+<!--                <mapper resource="io/zwt/simple/mapper/RolePrivilegeMapper.xml"/>-->
     </mappers>
 </configuration>
