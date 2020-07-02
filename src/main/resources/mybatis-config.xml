@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE configuration
-        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
-        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+    PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <settings>
         <setting name="logImpl" value="LOG4J"/>
@@ -16,8 +16,9 @@
                 <property name="" value=""/>
             </transactionManager>
             <dataSource type="UNPOOLED">
-                <property name="driver" value="com.mysql.jdbc.Driver"/>
-                <property name="url" value="jdbc:mysql://localhost:3306/mybatis"/>
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+                <property name="url"
+                          value="jdbc:mysql://localhost:3306/simple?serverTimezone=Asia/Shanghai"/>
                 <property name="username" value="root"/>
                 <property name="password" value="se1124"/>
             </dataSource>
@@ -26,11 +27,11 @@
 
     <mappers>
         <package name="io.zwt.simple.mapper"/>
-<!--                <mapper resource="io/zwt/simple/mapper/CountryMapper.xml"/>-->
-<!--                <mapper resource="io/zwt/simple/mapper/UserMapper.xml"/>-->
-<!--                <mapper resource="io/zwt/simple/mapper/RoleMapper.xml"/>-->
-<!--                <mapper resource="io/zwt/simple/mapper/PrivilegeMapper.xml"/>-->
-<!--                <mapper resource="io/zwt/simple/mapper/UserRoleMapper.xml"/>-->
-<!--                <mapper resource="io/zwt/simple/mapper/RolePrivilegeMapper.xml"/>-->
+        <!--<mapper resource="io/zwt/simple/mapper/CountryMapper.xml"/>
+        <mapper resource="io/zwt/simple/mapper/UserMapper.xml"/>
+        <mapper resource="io/zwt/simple/mapper/RoleMapper.xml"/>
+        <mapper resource="io/zwt/simple/mapper/PrivilegeMapper.xml"/>
+        <mapper resource="io/zwt/simple/mapper/UserRoleMapper.xml"/>
+        <mapper resource="io/zwt/simple/mapper/RolePrivilegeMapper.xml"/>-->
     </mappers>
 </configuration>
